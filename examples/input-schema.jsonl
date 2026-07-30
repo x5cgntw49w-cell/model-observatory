@@ -1,0 +1,2 @@
+{"id":"request-0001","label":"approve","probabilities":{"approve":0.72,"reject":0.08,"review":0.2},"slices":{"device":"mobile","region":"north"}}
+{"id":"request-0002","label":"review","probabilities":{"approve":0.13,"reject":0.16,"review":0.71},"slices":{"device":"desktop","region":"south"}}
