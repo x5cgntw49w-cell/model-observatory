@@ -25,6 +25,7 @@ def test_demo_cli_writes_report_and_summary(tmp_path) -> None:
     result = main(["demo", "--output-dir", str(output), "--size", "60", "--seed", "4"])
     assert result == 0
     assert (output / "report.html").is_file()
+    assert (output / "index.html").read_text() == (output / "report.html").read_text()
     summary = json.loads((output / "summary.json").read_text())
     assert summary["reference"]["count"] == 60
     assert summary["current"]["count"] == 60

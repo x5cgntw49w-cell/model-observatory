@@ -11,8 +11,11 @@ def write_report(output_dir: str | Path, summary: dict[str, Any]) -> tuple[Path,
     destination.mkdir(parents=True, exist_ok=True)
     json_path = destination / "summary.json"
     html_path = destination / "report.html"
+    index_path = destination / "index.html"
     json_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    html_path.write_text(render_report(summary), encoding="utf-8")
+    rendered = render_report(summary)
+    html_path.write_text(rendered, encoding="utf-8")
+    index_path.write_text(rendered, encoding="utf-8")
     return html_path, json_path
 
 

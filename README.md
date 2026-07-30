@@ -9,6 +9,8 @@ classification systems. It turns prediction JSONL into a machine-readable
 summary and a self-contained HTML report covering quality, calibration,
 selective prediction, slice performance, and distribution shift.
 
+**[Open the live demonstration report](https://x5cgntw49w-cell.github.io/model-observatory/)**
+
 ![Generated Model Observatory report](docs/report.png)
 
 ## Why this exists
@@ -92,6 +94,7 @@ model-observatory compare \
 Outputs:
 
 - `report.html`: self-contained reviewer-facing report
+- `index.html`: equivalent report entry point for static hosting
 - `summary.json`: complete machine-readable metrics and diagnostics
 
 ## Validation guarantees
